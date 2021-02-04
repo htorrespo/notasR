@@ -90,7 +90,7 @@ par(mfrow = c(1, 1))
 ```terminal
 # Example 5
 mayorNOx <- c(99.6, 0.4)
-minorNOx <- c(54562.35, 3874.26, 25448.33, 2514.24, 25448.33, 5835.91, 10443.35, 57.73, 302.96, 155.77)
+minorNOx <- c(42.41, 3.01, 19.78, 1.95, 19.78, 4.54, 8.12, 0.04, 0.24, 0.12)
 par(mfrow = c(1, 2))
 
 pie(mayorNOx, labels = mayorNOx, col = 1:2, cex = 2)
@@ -102,8 +102,29 @@ However, the best pie chart color palettes may be the ones of the brewer.pal
 function of the RColorBrewer package.
 
 ```terminal
+# Example 6
 install.packages("RColorBrewer")
 library(RColorBrewer)
 ```
 
 
+```terminal
+# Example 7
+mayorNOx <- c(99.6, 0.4)
+color <- brewer.pal(length(mayorNOx), "Set2") 
+pie(mayorNOx, labels = paste0(mayorNOx, "%"), col = color)
+
+minorNOx <- c(42.41, 3.01, 19.78, 1.95, 19.78, 4.54, 8.12, 0.04, 0.24, 0.12)
+color <- brewer.pal(length(minorNOx), "Set2") 
+pie(minorNOx, labels = paste0(minorNOx, "%"), col = color)
+```
+
+```terminal
+count_3 <- c(20, 50, 30)
+# sum(count_3) # 100
+
+pie(count_3, labels = paste0(count_3, "%"))
+
+legend("topleft", legend = c("Theatre", "Series", "Movies"),
+       fill =  c("white", "lightblue", "mistyrose"))
+```
