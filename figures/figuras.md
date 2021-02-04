@@ -14,3 +14,21 @@ Following is the description of the parameters used −
 - __main__ indicates the title of the chart.
 - __col__ indicates the color palette.
 - __clockwise__ is a logical value indicating if the slices are drawn clockwise or anti clockwise.
+
+A very simple pie-chart is created using just the input vector and labels. The below 
+script will create and save the pie chart in the current R working directory.
+
+```terminal
+# Create data for the graph.
+x <- c(21, 62, 10, 53)
+labels <- c("London", "New York", "Singapore", "Mumbai")
+
+# Give the chart file a name.
+png(file = "city.png")
+
+# Plot the chart.
+pie(x,labels)
+
+# Save the file.
+dev.off()
+```
