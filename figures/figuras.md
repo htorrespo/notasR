@@ -118,6 +118,39 @@ minorNOx <- c(42.41, 3.01, 19.78, 1.95, 19.78, 4.54, 8.12, 0.04, 0.24, 0.12)
 color <- brewer.pal(length(minorNOx), "Set2") 
 pie(minorNOx, labels = paste0(minorNOx, "%"), col = color)
 ```
+After much experimentation, I came up with the 25 colors that are mostly distinguishable. 
+This is intended for classed data, not continuous/sequential data.
+
+```terminal
+c25 <- c(
+  "dodgerblue2", "#E31A1C", # red
+  "green4",
+  "#6A3D9A", # purple
+  "#FF7F00", # orange
+  "black", "gold1",
+  "skyblue2", "#FB9A99", # lt pink
+  "palegreen2",
+  "#CAB2D6", # lt purple
+  "#FDBF6F", # lt orange
+  "gray70", "khaki2",
+  "maroon", "orchid1", "deeppink1", "blue1", "steelblue4",
+  "darkturquoise", "green1", "yellow4", "yellow3",
+  "darkorange4", "brown"
+)
+pie(rep(1, 25), col = c25)
+```
+
+Or you can alternativly select the group of 30 colors
+
+```terminal
+manualcolors <- c('black','forestgreen', 'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1', 'tan4', 'darkblue', 
+                'mediumorchid1','firebrick4',  'yellowgreen', 'lightsalmon', 'tan3',
+                "tan1",'darkgray', 'wheat4', '#DDAD4B', 'chartreuse', 
+                'seagreen1', 'moccasin', 'mediumvioletred', 'seagreen','cadetblue1',
+                "darkolivegreen1" ,"tan2" ,   "tomato3" , "#7CE3D8","gainsboro")
+pie(rep(1, 30), col = manualcolors)
+```
 
 ```terminal
 count_3 <- c(20, 50, 30)
