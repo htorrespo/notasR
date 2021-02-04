@@ -153,11 +153,20 @@ pie(rep(1, 30), col = manualcolors)
 ```
 
 ```terminal
-count_3 <- c(20, 50, 30)
-# sum(count_3) # 100
+minorNOx <- c(42.41, 3.01, 19.78, 1.95, 19.78, 4.54, 8.12, 0.24, 0.12)
 
-pie(count_3, labels = paste0(count_3, "%"))
+# pie(minorNOx, labels = paste0(minorNOx, "%"))
+pie(minorNOx, labels = paste0(minorNOx, "%"), col = manualColors)
 
-legend("topleft", legend = c("Theatre", "Series", "Movies"),
-       fill =  c("white", "lightblue", "mistyrose"))
+legend("topleft", legend = c('Aircraft', 'APUs', 'Construccion Norte', 
+                'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
+                'Troncal Caribe 557', 'Troncal Caribe 558'),
+       fill =  c('black','forestgreen', 'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1', 'tan4'))
+
+labels <- c('Aircraft', 'APUs', 'Construccion Norte', 
+                'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
+                'Troncal Caribe 557', 'Troncal Caribe 558')
+manualColors <- c('black','forestgreen', 'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1', 'tan4')
 ```
