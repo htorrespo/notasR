@@ -155,23 +155,29 @@ pie(rep(1, 30), col = manualcolors)
 Example for NOX results
 
 ```terminal
-minorNOx <- c(42.41, 3.01, 19.78, 1.95, 19.78, 4.54, 8.12, 0.24, 0.12)
+minorNOx <- c(42.41, 3.01, 19.78, 1.95, 19.78, 4.54, 8.12#, 0.24, 0.12
+)
 
 # pie(minorNOx, labels = paste0(minorNOx, "%"))
 
-labels <- c('Aircraft', 'APUs', 'Construccion Norte', 
-                'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
-                'Troncal Caribe 557', 'Troncal Caribe 558')
-manualColors <- c('black','forestgreen', 'red2', 'orange', 'cornflowerblue', 
-                'magenta', 'darkolivegreen4', 'indianred1', 'tan4')
-                
+               
 pie(minorNOx, labels = paste0(minorNOx, "%"), col = manualColors)
 
 legend("topleft", legend = c('Aircraft', 'APUs', 'Construccion Norte', 
-                'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
-                'Troncal Caribe 557', 'Troncal Caribe 558'),
+                'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE'#, 
+                #'Troncal Caribe 557', 'Troncal Caribe 558'
+                ),
        fill =  c('black','forestgreen', 'red2', 'orange', 'cornflowerblue', 
-                'magenta', 'darkolivegreen4', 'indianred1', 'tan4'))
+                'magenta', 'darkolivegreen4'#, 'indianred1', 'tan4'
+                ))
+
+labels <- c('Aircraft', 'APUs', 'Construccion Norte', 
+                'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE'#, 
+                #'Troncal Caribe 557', 'Troncal Caribe 558'
+                )
+manualColors <- c('black','forestgreen', 'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4'#, 'indianred1', 'tan4'
+                )
 
 ```
 
@@ -184,22 +190,37 @@ mayorSOx <- c(99.8, 0.2)
 color <- brewer.pal(length(mayorSOx), "Set2") 
 pie(mayorSOx, labels = paste0(mayorSOx, "%"), col = color)
 
-minorSOx <- c(74.11, 5.79, 0.68, 0.07, 0.68, 14.16, 2.60, 1.12, 0.57)
+minorSOx <- c(74.11, 5.79, 
+            #0.68, 0.07, 0.68, 
+            14.16, 2.60, 1.12
+            #, 0.57
+            )
 
 # pie(minorSOx, labels = paste0(minorSOx, "%"))
 
-labels <- c('Aircraft', 'APUs', 'Construccion Norte', 
-                'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
-                'Troncal Caribe 557', 'Troncal Caribe 558')
-manualColors <- c('black','forestgreen', 'red2', 'orange', 'cornflowerblue', 
-                'magenta', 'darkolivegreen4', 'indianred1', 'tan4')
+labels <- c('Aircraft', 'APUs', 
+                #'Construccion Norte', 'Construccion Occid', 'Construccion Sur', 
+                'FENOCO', 'GSE',  'Troncal Caribe 557'
+                #, 'Troncal Caribe 558'
+                )
+manualColors <- c('black','forestgreen', 
+                #'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1'
+                #, 'tan4'
+                )
                 
 pie(minorSOx, labels = paste0(minorSOx, "%"), col = manualColors)
 
-legend("topleft", legend = c('Aircraft', 'APUs', 'Construccion Norte', 
-                'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
-                'Troncal Caribe 557', 'Troncal Caribe 558'),
-       fill =  c('black','forestgreen', 'red2', 'orange', 'cornflowerblue', 
-                'magenta', 'darkolivegreen4', 'indianred1', 'tan4'))
+legend("topleft", legend = c('Aircraft', 'APUs', 
+                #'Construccion Norte', 'Construccion Occid', 'Construccion Sur', 
+                'FENOCO', 'GSE',  'Troncal Caribe 557'
+                #, 'Troncal Caribe 558'
+                ),
+       fill =  c('black','forestgreen', 
+                #'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1'
+                #, 'tan4'
+                
+                ))
 
 ```
