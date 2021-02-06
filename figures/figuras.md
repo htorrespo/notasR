@@ -152,15 +152,14 @@ manualcolors <- c('black','forestgreen', 'red2', 'orange', 'cornflowerblue',
 pie(rep(1, 30), col = manualcolors)
 ```
 
-Example for NOX results
+Several examles results
 
 ```terminal
+#====================================================================
+# Resultados de NOX
 minorNOx <- c(42.41, 3.01, 19.78, 1.95, 19.78, 4.54, 8.12#, 0.24, 0.12
 )
-
-# pie(minorNOx, labels = paste0(minorNOx, "%"))
-
-               
+       
 pie(minorNOx, labels = paste0(minorNOx, "%"), col = manualColors)
 
 legend("topleft", legend = c('Aircraft', 'APUs', 'Construccion Norte', 
@@ -179,36 +178,13 @@ manualColors <- c('black','forestgreen', 'red2', 'orange', 'cornflowerblue',
                 'magenta', 'darkolivegreen4'#, 'indianred1', 'tan4'
                 )
 
-```
-
-
-Example for SOX results
-
-```terminal
-
-mayorSOx <- c(99.8, 0.2)
-color <- brewer.pal(length(mayorSOx), "Set2") 
-pie(mayorSOx, labels = paste0(mayorSOx, "%"), col = color)
-
+#------------------------------------------------------------------
 minorSOx <- c(74.11, 5.79, 
             #0.68, 0.07, 0.68, 
             14.16, 2.60, 1.12
             #, 0.57
             )
 
-# pie(minorSOx, labels = paste0(minorSOx, "%"))
-
-labels <- c('Aircraft', 'APUs', 
-                #'Construccion Norte', 'Construccion Occid', 'Construccion Sur', 
-                'FENOCO', 'GSE',  'Troncal Caribe 557'
-                #, 'Troncal Caribe 558'
-                )
-manualColors <- c('black','forestgreen', 
-                #'red2', 'orange', 'cornflowerblue', 
-                'magenta', 'darkolivegreen4', 'indianred1'
-                #, 'tan4'
-                )
-                
 pie(minorSOx, labels = paste0(minorSOx, "%"), col = manualColors)
 
 legend("topleft", legend = c('Aircraft', 'APUs', 
@@ -222,5 +198,143 @@ legend("topleft", legend = c('Aircraft', 'APUs',
                 #, 'tan4'
                 
                 ))
+
+labels <- c('Aircraft', 'APUs', 
+                #'Construccion Norte', 'Construccion Occid', 'Construccion Sur', 
+                'FENOCO', 'GSE',  'Troncal Caribe 557'
+                #, 'Troncal Caribe 558'
+                )
+manualColors <- c('black','forestgreen', 
+                #'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1'
+                #, 'tan4'
+                )
+
+#====================================================================
+# Resultados de PM10
+
+mayorPM10 <- c(77, 22.8)
+
+labels <- c('Asfalto-Chimenea', 'Asfalto-Agregados')
+manualColors <- c('yellowgreen', 'lightsalmon')
+pie(mayorPM10, labels = paste0(mayorPM10, "%"), col = manualColors)
+legend("topleft", legend = c('Asfalto-Chimenea', 'Asfalto-Agregados'
+                ),
+       fill =  c('yellowgreen', 'lightsalmon'
+                ))
+
+minorPM10 <- c(3.0, 1.9, 4.2, 29.1, 
+                   20.9, 29.1, 3.3, 4.8, 
+                   2.0, 1.0 )
+
+labels <- c('Aircraft', 'APUs', 'Bloqueras', 'Construccion Norte', 
+            'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
+            'Troncal Caribe 557', 'Troncal Caribe 558' )
+
+manualColors <- c('forestgreen', 'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1', 'mediumorchid1',
+                'black', 'tan4' )
+
+pie(minorPM10, labels = paste0(minorPM10, "%"), col = manualColors)
+legend("topleft", legend = c('Aircraft', 'APUs', 'Bloqueras', 'Construccion Norte', 
+            'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
+            'Troncal Caribe 557', 'Troncal Caribe 558' 
+                ),
+       fill =  c('forestgreen', 'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1', 'mediumorchid1',
+                'black', 'tan4'
+                ))
+
+#------------------------------------------------------------------
+# Resultados de PM2.5
+
+mayorPM2.5 <- c(85.8, 14.1)
+
+labels <- c('Asfalto-Chimenea', 'Asfalto-Agregados')
+manualColors <- c('yellowgreen', 'lightsalmon')
+pie(mayorPM2.5, labels = paste0(mayorPM2.5, "%"), col = manualColors)
+legend("topleft", legend = c('Asfalto-Chimenea', 'Asfalto-Agregados'
+                ),
+       fill =  c('yellowgreen', 'lightsalmon'
+                ))
+
+minorPM2.5 <- c(6, 3.7, 8.3, 24.4, 
+               10.1, 24.4, 6.5, 9.2, 
+               4.1, 2.1)
+
+labels <- c('Aircraft', 'APUs', 'Bloqueras', 'Construccion Norte', 
+            'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
+            'Troncal Caribe 557', 'Troncal Caribe 558' )
+
+manualColors <- c('forestgreen', 'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1', 'mediumorchid1',
+                'black', 'tan4' )
+
+pie(minorPM2.5, labels = paste0(minorPM2.5, "%"), col = manualColors)
+legend("topleft", legend = c('Aircraft', 'APUs', 'Bloqueras', 'Construccion Norte', 
+            'Construccion Occid', 'Construccion Sur', 'FENOCO', 'GSE', 
+            'Troncal Caribe 557', 'Troncal Caribe 558' 
+                ),
+       fill =  c('forestgreen', 'red2', 'orange', 'cornflowerblue', 
+                'magenta', 'darkolivegreen4', 'indianred1', 'mediumorchid1',
+                'black', 'tan4'
+                ))
+
+#====================================================================
+# Escenario 2050
+
+# Resultados de NOX
+NOx2050 <- c(87.8, 5.5, 2.3, 3.1)
+
+labels <- c('Aircraft', 'APUs', 'FENOCO', 'GSE' )
+manualColors <- c('mediumvioletred','forestgreen', 'red2', 'orange' )
+
+pie(NOx2050, labels = paste0(NOx2050, "%"), col = manualColors)
+
+legend("topleft", legend = c('Aircraft', 'APUs', 'FENOCO', 'GSE' ),
+       fill =  c('mediumvioletred','forestgreen', 'red2', 'orange' ))
+
+#------------------------------------------------------------------
+# Resultados de SOX
+SOx2050 <- c(83.5, 6.2, 4.2, 2.7, 2 )
+
+labels <- c('Aircraft', 'APUs', 'FENOCO', 'GSE' )
+manualColors <- c('darkolivegreen1','forestgreen', 'red2', 'orange', 'magenta' )
+pie(SOx2050, labels = paste0(SOx2050, "%"), col = manualColors)
+
+legend("topleft", legend = c('Aircraft', 'APUs', 'FENOCO', 'GSE', 'Ingreso Aeropuerto' ),
+       fill =  c('darkolivegreen1','forestgreen', 'red2', 'orange', 'magenta' ))
+
+#====================================================================
+# Escenario 2050
+
+# Resultados de particulas PM10
+PM10_2050 <- c( 16.4, 11.3, 27.5, 5.5, 6.1, 21.4, 7.3, 4.1)
+
+labels <- c('Aircraft', 'APUs', 'Bloqueras', 'FENOCO',
+                   'GSE', 'Ingreso Aeropuerto', 'Troncal Caribe 557', ' Troncal Caribe 558' )
+manualColors <- c('seagreen1', 'moccasin', 'mediumvioletred', 'seagreen','cadetblue1',
+                'darkolivegreen1' , 'tan2' , 'tomato3' )
+pie(PM10_2050, labels = paste0(PM10_2050, "%"), col = manualColors)
+
+legend("topleft", legend = c('Aircraft', 'APUs', 'Bloqueras', 'FENOCO',
+                   'GSE', 'Ingreso Aeropuerto', 'Troncal Caribe 557', 'Troncal Caribe 558' ),
+       fill =  c('seagreen1', 'moccasin', 'mediumvioletred', 'seagreen','cadetblue1',
+                'darkolivegreen1', 'tan2', 'tomato3' ))
+
+#------------------------------------------------------------------
+# Resultados de particulas PM2.5
+PM25_2050 <- c( 16.5, 11.4, 27.6, 5.5, 5.8, 21.5, 7.4, 4.1)
+
+labels <- c('Aircraft', 'APUs', 'Bloqueras', 'FENOCO',
+                   'GSE', 'Ingreso Aeropuerto', 'Troncal Caribe 557', 'Troncal Caribe 558' )
+manualColors <- c('seagreen1', 'moccasin', 'mediumvioletred', 'seagreen','cadetblue1',
+                'darkolivegreen1' , 'tan2' , 'tomato3' )
+pie(PM25_2050, labels = paste0(PM25_2050, "%"), col = manualColors)
+
+legend("topleft", legend = c('Aircraft', 'APUs', 'Bloqueras', 'FENOCO',
+                   'GSE', 'Ingreso Aeropuerto', 'Troncal Caribe 557', ' Troncal Caribe 558' ),
+       fill =  c('seagreen1', 'moccasin', 'mediumvioletred', 'seagreen','cadetblue1',
+                'darkolivegreen1', 'tan2', 'tomato3' ))
 
 ```
